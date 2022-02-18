@@ -1,22 +1,25 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import "../../styles/sass/work.scss"
 
 const BlogPage = ({ data }) => {
   return (
-    <Layout pageTitle="My Blog Posts">
-      {
-        data.allMdx.nodes.map(node => (
-          <article key={node.id}>
-            <h2>
+    <Layout pageTitle="Projects">
+      <div className="portfolio-grid">
+        {
+          data.allMdx.nodes.map(node => (
+            <article key={node.id}>
+             
               <Link to={`/blog/${node.slug}`}>
-                {node.frontmatter.title}
+              <GatsbyImage className="portfolio-item" image={getImage(node.frontmatter.thumbnail)} />
               </Link>
-            </h2>
-            <p>Posted: {node.frontmatter.date}</p>
-          </article>
-        ))
-      }
+              {/* <p>Posted: {node.frontmatter.date}</p> */}
+            </article>
+          ))
+        }
+      </div>
     </Layout>
   )
 }
@@ -28,6 +31,11 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
         slug

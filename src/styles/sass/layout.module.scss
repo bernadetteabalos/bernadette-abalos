@@ -1,8 +1,20 @@
 @import "./variables.scss";
+html {
+  background-color: rgb(39, 37, 37);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
 
 .container {
   margin: auto;
-  max-width: 65%;
+  max-width: 53%;
   font-family: $font;
   display: flex;
   flex-direction: column;
@@ -12,18 +24,21 @@
 }
 
 .heading {
-  color: rebeccapurple;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  margin: 0;
 }
 
 .navigation {
   width: 100%;
   margin: auto;
   z-index: 2;
-  font-size: 2em;
+  font-size: 1.5em;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
+  padding-bottom: 7rem;
 }
 
 .nav-links {
@@ -36,26 +51,19 @@
   
   a {
     text-decoration: none;
-    color: rgb(176, 193, 218);
+    // color: #516483;
+    color:rgb(207, 207, 207);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: rgb(134, 134, 134);
+      
+    }
   }
 
 }
 
-.navLeft {
-  display: flex;
-  justify-content: flex-start;
-}
 
-.navRight {
-  display: flex;
-  justify-content: flex-end;
-  
-}
-
-
-.nav-link-item {
-  // padding-right: 2rem;
-}
 .nav-link-text {
   color: black;
 }
@@ -74,7 +82,7 @@
 .header {
   width: 100vw;
   height: 25vh;
-  background-color: #3D434D;
+  background-color: $night;
   // background-image: url('../../images/night.svg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,4 +99,17 @@
     width: 28%;
     height: 28%;
   }
+}
+
+hr {
+  border: 0;
+  display:block;
+  width: 2em;               
+  background-color:rgb(185, 185, 185);
+  height: 1px;
+  margin-top: 1em;
+}
+
+p {
+  color: white;
 }
