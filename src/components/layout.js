@@ -11,7 +11,8 @@ import {
   pfp,
   navigation,
   navLeft,
-  navRight
+  navRight,
+  active
 } from '../styles/sass/layout.module.scss'
 import icon from "../images/pfp.svg"
 
@@ -87,12 +88,12 @@ const Layout = ({ pageTitle, children }) => {
           <div>
             <ul className={navLinks}>
               <li className={navLinkItem}>
-                <Link to="/" className={navLinkText}>
+                <Link to="/" activeClassName={active} className={navLinkText}>
                   Home
                 </Link>
               </li>
               <li className={navLinkItem}>
-                <Link to="/about" className={navLinkText}>
+                <Link to="/about" activeClassName={active} className={navLinkText}>
                   About
                 </Link>
               </li>
@@ -101,12 +102,12 @@ const Layout = ({ pageTitle, children }) => {
           <div>
             <ul className={navLinks}>
               <li className={navLinkItem}>
-                <Link to="/blog" className={navLinkText}>
+                <Link to="/blog" activeClassName={active} className={navLinkText}>
                   Work
                 </Link>
               </li>
               <li className={navLinkItem}>
-                <Link to="/contact" className={navLinkText}>
+                <Link to="/contact" activeClassName={active} className={navLinkText}>
                   Contact
                 </Link>
               </li>

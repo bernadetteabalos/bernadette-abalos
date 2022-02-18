@@ -59,6 +59,10 @@ main {
       color: rgb(134, 134, 134);
       
     }
+    &.active {
+      text-decoration: underline;
+      color:rgb(207, 207, 207);
+    }
   }
 
 }
@@ -113,3 +117,4 @@ hr {
 p {
   color: white;
 }
+
