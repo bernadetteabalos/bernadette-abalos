@@ -1,3 +1,4 @@
+
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import {
@@ -14,7 +15,9 @@ import {
   navRight,
   active
 } from '../styles/sass/layout.module.scss'
+
 import icon from "../images/pfp.svg"
+import { useColorMode } from 'theme-ui'
 
 const Layout = ({ pageTitle, children }) => {
   
@@ -27,10 +30,11 @@ const Layout = ({ pageTitle, children }) => {
     }
   }
 `)
-
+const [colorMode, setColorMode] = useColorMode()
+// const nextColorMode = colorMode === 'light' ? 'dark' : 'light'
 
   return (
-
+    
     <div>
       <div className={container}>
         <div className={header}>
@@ -84,6 +88,7 @@ const Layout = ({ pageTitle, children }) => {
 
         <title>{pageTitle} | {data.site.siteMetadata.title}</title>
         {/* <header className={siteTitle}>{data.site.siteMetadata.title}</header> */}
+        
         <nav className={navigation}>
           <div>
             <ul className={navLinks}>
@@ -111,11 +116,14 @@ const Layout = ({ pageTitle, children }) => {
                   Contact
                 </Link>
               </li>
+              <button onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}>
+          plz click me
+        </button>
             </ul>
           </div>
         </nav>
         <main>
-          <h1 className={heading}>{pageTitle}</h1>
+          <h1 sx={{bg: 'primary'}}className={heading}>{pageTitle}</h1>
           <hr />
           {children}
         </main>
