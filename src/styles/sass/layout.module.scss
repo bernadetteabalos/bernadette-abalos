@@ -1,6 +1,7 @@
 @import "./variables.scss";
 html {
   background-color: rgb(39, 37, 37);
+  transition: all 0.3s ease;
 }
 
 main {
@@ -24,7 +25,6 @@ main {
 }
 
 .heading {
-  color: rgb(255, 255, 255);
   font-size: 25px;
   margin: 0;
 }
@@ -52,7 +52,7 @@ main {
   a {
     text-decoration: none;
     // color: #516483;
-    color:rgb(207, 207, 207);
+    
     transition: all 0.3s ease;
 
     &:hover {
@@ -65,11 +65,6 @@ main {
     }
   }
 
-}
-
-
-.nav-link-text {
-  color: black;
 }
 
 
@@ -112,9 +107,5 @@ hr {
   background-color:rgb(185, 185, 185);
   height: 1px;
   margin-top: 1em;
-}
-
-p {
-  color: white;
 }
 

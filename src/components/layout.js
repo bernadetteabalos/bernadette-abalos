@@ -1,4 +1,4 @@
-
+/** @jsx jsx */
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import {
@@ -17,10 +17,10 @@ import {
 } from '../styles/sass/layout.module.scss'
 
 import icon from "../images/pfp.svg"
-import { useColorMode } from 'theme-ui'
+import { jsx, useColorMode } from 'theme-ui'
 
 const Layout = ({ pageTitle, children }) => {
-  
+
   const data = useStaticQuery(graphql`
   query {
     site {
@@ -30,11 +30,11 @@ const Layout = ({ pageTitle, children }) => {
     }
   }
 `)
-const [colorMode, setColorMode] = useColorMode()
-// const nextColorMode = colorMode === 'light' ? 'dark' : 'light'
+  const [colorMode, setColorMode] = useColorMode()
+  // const nextColorMode = colorMode === 'light' ? 'dark' : 'light'
 
   return (
-    
+
     <div>
       <div className={container}>
         <div className={header}>
@@ -88,17 +88,27 @@ const [colorMode, setColorMode] = useColorMode()
 
         <title>{pageTitle} | {data.site.siteMetadata.title}</title>
         {/* <header className={siteTitle}>{data.site.siteMetadata.title}</header> */}
-        
+
         <nav className={navigation}>
           <div>
             <ul className={navLinks}>
               <li className={navLinkItem}>
-                <Link to="/" activeClassName={active} className={navLinkText}>
+                <Link sx={{
+                  color: 'text',
+                  '&.active': {
+                    color: 'primary',
+                  },
+                }} to="/" activeClassName={active} className={navLinkText}>
                   Home
                 </Link>
               </li>
               <li className={navLinkItem}>
-                <Link to="/about" activeClassName={active} className={navLinkText}>
+                <Link sx={{
+                  color: 'text',
+                  '&.active': {
+                    color: 'primary',
+                  },
+                }} to="/about" activeClassName={active} className={navLinkText}>
                   About
                 </Link>
               </li>
@@ -107,23 +117,34 @@ const [colorMode, setColorMode] = useColorMode()
           <div>
             <ul className={navLinks}>
               <li className={navLinkItem}>
-                <Link to="/blog" activeClassName={active} className={navLinkText}>
+                <Link sx={{
+                  color: 'text',
+                  '&.active': {
+                    color: 'primary',
+                  },
+                }} to="/blog" activeClassName={active} className={navLinkText}>
                   Work
                 </Link>
               </li>
               <li className={navLinkItem}>
-                <Link to="/contact" activeClassName={active} className={navLinkText}>
+                <Link sx={{
+                  color: 'text',
+                  '&.active': {
+                    color: 'primary',
+                  },
+                }} to="/contact" activeClassName={active} className={navLinkText}>
                   Contact
                 </Link>
               </li>
-              <button onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}>
-          plz click me
-        </button>
+              
             </ul>
           </div>
         </nav>
         <main>
-          <h1 sx={{bg: 'primary'}}className={heading}>{pageTitle}</h1>
+        <button onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}>
+                plz click me
+              </button>
+          <h1 className={heading}>{pageTitle}</h1>
           <hr />
           {children}
         </main>

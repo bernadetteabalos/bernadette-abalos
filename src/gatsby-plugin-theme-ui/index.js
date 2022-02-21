@@ -1,14 +1,14 @@
 const theme = {
   initialColorModeName: 'light',
   colors: {
-    text: "#333",
+    text: "#25282b",
     background: "#fff",
-    primary: "#639",
+    primary: "#25282b",
     secondary: "#ff6347",
     modes: {
       dark: {
         text: '#fff',
-        background: '#3D434D',
+        background: '#25282b',
         primary: '#cfcfcf',
       }
     }
