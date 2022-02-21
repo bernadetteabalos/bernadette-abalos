@@ -2,14 +2,15 @@ const theme = {
   initialColorModeName: 'light',
   colors: {
     text: "#25282b",
-    background: "#fff",
+    background: "#F6EFDB",
     primary: "#25282b",
-    secondary: "#ff6347",
+    secondary: "#CB9CA5",
     modes: {
       dark: {
-        text: '#fff',
+        text: '#F2BEA6',
         background: '#25282b',
         primary: '#cfcfcf',
+        secondary: '#A98D96'
       }
     }
   }

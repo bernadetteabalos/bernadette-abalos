@@ -37,7 +37,8 @@ const Layout = ({ pageTitle, children }) => {
 
     <div>
       <div className={container}>
-        <div className={header}>
+        <div sx={{bg: 'secondary'}} className={header}>
+          
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
@@ -57,29 +58,29 @@ const Layout = ({ pageTitle, children }) => {
                   height="100%"
                   fill="none"
                   strokeWidth="2"
-                  stroke={"#939393"}
+                  stroke={colorMode === 'light' ? "#FFF" : '#CBA4AE'}
                 />
               </pattern>
             </defs>
 
             <rect x="0" y="0" width="100%" height="100%" fill="url(#grid-pattern)" />
             <svg x="48%" y="9%" style={{ overflow: 'visible' }}>
-              <circle cx="33" cy="38" r="40" fill="white" />
-              <circle cx="43" cy="33" r="29" fill="#C4C4C4" />
+              <circle cx="33" cy="38" r="40" fill={colorMode === 'dark' ? "#FFEAAE" : "#FFEAAE"} />
+              <circle cx="43" cy="33" r="29" fill={colorMode === 'dark' ? "#25282b" : "#FFEAAE"} />
             </svg>
             <svg x="30%">
-              <path d="M56 33L58.2627 38.7373L64 41L58.2627 43.2627L56 49L53.7373 43.2627L48 41L53.7373 38.7373L56 33Z" fill="#C4C4C4" />
-              <path d="M107 85L109.263 90.7373L115 93L109.263 95.2627L107 101L104.737 95.2627L99 93L104.737 90.7373L107 85Z" fill="#C4C4C4" />
-              <path d="M174 38L176.263 43.7373L182 46L176.263 48.2627L174 54L171.737 48.2627L166 46L171.737 43.7373L174 38Z" fill="#C4C4C4" />
-              <path d="M232 85L234.263 90.7373L240 93L234.263 95.2627L232 101L229.737 95.2627L224 93L229.737 90.7373L232 85Z" fill="#C4C4C4" />
+              <path d="M56 33L58.2627 38.7373L64 41L58.2627 43.2627L56 49L53.7373 43.2627L48 41L53.7373 38.7373L56 33Z" fill={colorMode === 'dark' ? "#25282b" : "#FFEAAE"} />
+              <path d="M107 85L109.263 90.7373L115 93L109.263 95.2627L107 101L104.737 95.2627L99 93L104.737 90.7373L107 85Z" fill={colorMode === 'dark' ? "#25282b" : "#FFEAAE"} />
+              <path d="M174 38L176.263 43.7373L182 46L176.263 48.2627L174 54L171.737 48.2627L166 46L171.737 43.7373L174 38Z" fill={colorMode === 'dark' ? "#25282b" : "#FFEAAE"} />
+              <path d="M232 85L234.263 90.7373L240 93L234.263 95.2627L232 101L229.737 95.2627L224 93L229.737 90.7373L232 85Z" fill={colorMode === 'dark' ? "#25282b" : "#FFEAAE"} />
             </svg>
             <svg x="53%">
-              <path d="M56 33L58.2627 38.7373L64 41L58.2627 43.2627L56 49L53.7373 43.2627L48 41L53.7373 38.7373L56 33Z" fill="#C4C4C4" />
-              <path d="M107 85L109.263 90.7373L115 93L109.263 95.2627L107 101L104.737 95.2627L99 93L104.737 90.7373L107 85Z" fill="#C4C4C4" />
-              <path d="M174 38L176.263 43.7373L182 46L176.263 48.2627L174 54L171.737 48.2627L166 46L171.737 43.7373L174 38Z" fill="#C4C4C4" />
-              <path d="M232 85L234.263 90.7373L240 93L234.263 95.2627L232 101L229.737 95.2627L224 93L229.737 90.7373L232 85Z" fill="#C4C4C4" />
+              <path d="M56 33L58.2627 38.7373L64 41L58.2627 43.2627L56 49L53.7373 43.2627L48 41L53.7373 38.7373L56 33Z" fill={colorMode === 'dark' ? "#25282b" : "#FFEAAE"} />
+              <path d="M107 85L109.263 90.7373L115 93L109.263 95.2627L107 101L104.737 95.2627L99 93L104.737 90.7373L107 85Z" fill={colorMode === 'dark' ? "#25282b" : "#FFEAAE"} />
+              <path d="M174 38L176.263 43.7373L182 46L176.263 48.2627L174 54L171.737 48.2627L166 46L171.737 43.7373L174 38Z" fill={colorMode === 'dark' ? "#25282b" : "#FFEAAE"} />
+              <path d="M232 85L234.263 90.7373L240 93L234.263 95.2627L232 101L229.737 95.2627L224 93L229.737 90.7373L232 85Z" fill={colorMode === 'dark' ? "#25282b" : "#FFEAAE"} />
             </svg>
-          </svg>
+          </svg> 
           <div className={pfp}>
             <img src={icon}></img>
           </div>
