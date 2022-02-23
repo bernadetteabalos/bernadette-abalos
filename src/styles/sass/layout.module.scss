@@ -109,3 +109,27 @@ hr {
   margin-top: 1em;
 }
 
+.navButton {
+  position: absolute;
+  z-index: 1;
+  padding: 2em;
+  button {
+    font-size: 18px;
+    border: none;
+    width: 60px;
+    height: 60px;
+    padding: 0px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+      &:hover {
+        filter: brightness(1.5);
+      };
+      &:focus {
+        box-shadow: none;
+      }
+      &:active {
+        border: none;
+      }
+  }
+}
