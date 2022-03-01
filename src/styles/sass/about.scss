@@ -1,0 +1,18 @@
+.aboutPage {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2em;
+  padding-bottom: 5em;
+  .aboutImage {
+    max-width: 50%;
+    height: auto;
+  }
+  .aboutInfo {
+    padding-left: 2em;
+    text-align: left;
+  }
+}
+
+.secondSection {
+  color: red;
+}
