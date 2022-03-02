@@ -20,6 +20,15 @@ const BlogPage = ({ data }) => {
           ))
         }
       </div>
+      {/* <div className="publications">
+        <h2>Publications</h2>
+        <p></p>
+        <hr />
+      </div>
+      <div className="inspo">
+        <h2>Self Inspo Comics</h2>
+        <hr />
+      </div> */}
     </Layout>
   )
 }

@@ -1,22 +1,24 @@
 /** @jsx jsx */
 import * as React from 'react'
+import {useState} from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import {
   container,
   heading,
   navLinks,
-  navLinkItem,
-  navLinkText,
   header,
   pfp,
   navigation,
   navButton,
-  active
+  active,
+  colorButton,
+  navList,
+  fadeIn
 } from '../styles/sass/layout.module.scss'
 
 import icon from "../images/pfp.svg"
 import { jsx, useColorMode } from 'theme-ui'
-import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
+import { BsFillMoonFill, BsSunFill, BsList } from "react-icons/bs";
 
 const Layout = ({ pageTitle, children }) => {
 
@@ -30,17 +32,28 @@ const Layout = ({ pageTitle, children }) => {
   }
 `)
   const [colorMode, setColorMode] = useColorMode()
-  // const nextColorMode = colorMode === 'light' ? 'dark' : 'light'
+  const [state, setState] = useState("hidden" || "showing")
 
   return (
 
     <div>
       <div className={container}>
         <div sx={{ bg: 'secondary' }} className={header}>
-          <div className={navButton}>
+          <div className={colorButton}>
             <button sx={{ bg: 'text', color: 'secondary' }} onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}>
             {colorMode === 'light' ? <BsFillMoonFill/> : <BsSunFill/>}
             </button>
+          </div>
+          <div className={navButton}>
+          <button onClick={() => {state === "hidden" ? setState("showing") : setState("hidden")}} sx={{ bg: 'text', color: 'secondary' }} style={{ filter: state !== "hidden" && "brightness(1.5)"}}>
+            <BsList/>
+            </button>
+            <div className={fadeIn} id={navList} style={{ display: state === "hidden" ? "none" : "block"}}>
+              <Link sx={{ bg: 'text', color: 'secondary' }} activeClassName={active} to="/">Home</Link>
+              <Link sx={{ bg: 'text', color: 'secondary' }} activeClassName={active} to="/about">About</Link>
+              <Link sx={{ bg: 'text', color: 'secondary' }} activeClassName={active} to="/blog">Work</Link>
+              <Link sx={{ bg: 'text', color: 'secondary' }} activeClassName={active} to="/contact">Contact</Link>
+            </div>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -96,23 +109,23 @@ const Layout = ({ pageTitle, children }) => {
         <nav className={navigation}>
           <div>
             <ul className={navLinks}>
-              <li className={navLinkItem}>
+              <li >
                 <Link sx={{
                   color: 'text',
                   '&.active': {
                     color: 'primary',
                   },
-                }} to="/" activeClassName={active} className={navLinkText}>
+                }} to="/" activeClassName={active} >
                   Home
                 </Link>
               </li>
-              <li className={navLinkItem}>
+              <li >
                 <Link sx={{
                   color: 'text',
                   '&.active': {
                     color: 'primary',
                   },
-                }} to="/about" activeClassName={active} className={navLinkText}>
+                }} to="/about" activeClassName={active} >
                   About
                 </Link>
               </li>
@@ -120,23 +133,23 @@ const Layout = ({ pageTitle, children }) => {
           </div>
           <div>
             <ul className={navLinks}>
-              <li className={navLinkItem}>
+              <li >
                 <Link sx={{
                   color: 'text',
                   '&.active': {
                     color: 'primary',
                   },
-                }} to="/blog" activeClassName={active} className={navLinkText}>
+                }} to="/blog" activeClassName={active} >
                   Work
                 </Link>
               </li>
-              <li className={navLinkItem}>
+              <li >
                 <Link sx={{
                   color: 'text',
                   '&.active': {
                     color: 'primary',
                   },
-                }} to="/contact" activeClassName={active} className={navLinkText}>
+                }} to="/contact" activeClassName={active} >
                   Contact
                 </Link>
               </li>

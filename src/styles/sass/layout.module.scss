@@ -1,4 +1,6 @@
 @import "./variables.scss";
+
+
 html {
   background-color: rgb(39, 37, 37);
   transition: all 0.3s ease;
@@ -94,9 +96,8 @@ main {
   justify-content: center;
   img {
     position: absolute;
-    z-index: 1;
     top: 8em;
-    width: 28%;
+    width: 100%;
     height: 28%;
   }
 }
@@ -110,9 +111,9 @@ hr {
   margin-top: 1em;
 }
 
-.navButton {
+.colorButton{
   position: absolute;
-  z-index: 1;
+  z-index: 6;
   padding: 2em;
   button {
     font-size: 18px;
@@ -132,5 +133,79 @@ hr {
       &:active {
         border: none;
       }
+  }
+}
+
+.navButton {
+  display: none;
+}
+
+#navList {
+  transition: all 1.3s ease;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 7em;
+  a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+    &:hover {
+      filter: brightness(1.5)
+    }
+    &.active {
+      filter: brightness(1.9)
+    }
+}
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.1s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    visibility: hidden;
+  }
+  .navButton {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    padding: 2em;
+    margin-top: 5em;
+    button {
+      font-size: 18px;
+      border: none;
+      width: 60px;
+      height: 60px;
+      padding: 0px;
+      overflow: hidden;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+        &:hover {
+          filter: brightness(1.5);
+        };
+        &:focus {
+          box-shadow: none;
+        }
+        &:active {
+          border: none;
+        }
+    }
   }
 }

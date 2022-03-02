@@ -1,5 +1,7 @@
 @import "./variables.scss";
 
+
+
 div.portfolio-grid {
   display: grid;
           justify-items: center;
@@ -20,4 +22,21 @@ div.portfolio-grid {
     }
 
   }
+}
+
+a.css-0 {
+  color: #F2BEA6
+}
+
+@media only screen and (max-width: 768px) {
+  div.portfolio-grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 15em;
+    grid-template-rows: auto;
+    .portfolio-item {
+      margin: 1em;
+    }
+}
 }

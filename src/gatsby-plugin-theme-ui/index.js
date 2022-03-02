@@ -11,6 +11,16 @@ const theme = {
         background: '#25282b',
         primary: '#cfcfcf',
         secondary: '#25282b'
+
+      }
+    }
+  },
+  styles: {
+    a: {
+      color: "#DC8580",
+      '&:hover': {
+        opacity: 0.65
+
       }
     }
   }

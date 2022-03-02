@@ -8,11 +8,30 @@
     height: auto;
   }
   .aboutInfo {
+    max-width: 50%;
     padding-left: 2em;
     text-align: left;
+    
   }
 }
 
 .secondSection {
   color: red;
+}
+
+@media only screen and (max-width: 1024px) {
+  .aboutPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .aboutImage {
+      max-width: 70%;
+      height: auto;
+    }
+    .aboutInfo {
+      max-width: 100%;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
 }

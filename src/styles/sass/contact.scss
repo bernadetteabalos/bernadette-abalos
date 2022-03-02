@@ -1,0 +1,28 @@
+.contact {
+  display: flex;
+  flex-direction: row;
+  .contactItem {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: inherit;
+    padding: 1em;
+    white-space: nowrap;
+  overflow: hidden;
+      &:hover {
+        opacity: 0.3;
+      };
+    .icon {
+      padding-right: 0.5em;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
