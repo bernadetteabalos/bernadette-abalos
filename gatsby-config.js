@@ -19,5 +19,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-mdx",
+    "gatsby-plugin-scroll-reveal"
   ]
 };

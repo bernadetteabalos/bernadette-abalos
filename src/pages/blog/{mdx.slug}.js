@@ -12,6 +12,10 @@ const BlogPost = ({ data }) => {
       <p>{data.mdx.frontmatter.date}</p>
       <div className="workPage">
       <GatsbyImage
+      data-sal="fade"
+      data-sal-duration="1000"
+      data-sal-delay="200"
+      data-sal-easing="ease" 
       className="workImage"
       image={image}
       alt={data.mdx.frontmatter.hero_image_alt}

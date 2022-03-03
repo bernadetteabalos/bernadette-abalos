@@ -12,8 +12,15 @@ const AboutPage = () => {
         className="aboutImage"
         alt="Profile picture of me"
         src='../images/about.jpg'
+        data-sal="slide-right" 
+      data-sal-duration="1000"
+      data-sal-delay="200"
+      data-sal-easing="ease"
       />
-      <div className="aboutInfo">
+      <div data-sal="fade" 
+      data-sal-duration="1000"
+      data-sal-delay="200"
+      data-sal-easing="ease" className="aboutInfo">
       <h2>Hello there 👋</h2>
       <p>My name is Bernadette and I'm a Full Stack Web Developer currently living in Toronto, ON.</p>
       <p>I graduated with an Honours Bachelor of Science at UofT and have recently pivoted into a career in technology after graduating from the Web Development bootcamp at Lighthouse Labs.</p>

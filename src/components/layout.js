@@ -103,7 +103,7 @@ const Layout = ({ pageTitle, children }) => {
         </div>
 
 
-        <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+        <title> {pageTitle} | {data.site.siteMetadata.title}</title>
         {/* <header className={siteTitle}>{data.site.siteMetadata.title}</header> */}
 
         <nav className={navigation}>

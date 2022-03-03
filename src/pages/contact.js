@@ -6,7 +6,10 @@ import '../styles/sass/contact.scss'
 const ContactPage= () => {
   return (
     <Layout pageTitle="Contact">
-      <div className="contact">
+      <div data-sal="fade" 
+      data-sal-duration="1000"
+      data-sal-delay="200"
+      data-sal-easing="ease" className="contact">
       <a className="contactItem"target="_blank" rel="noopener noreferrer" 
       href="mailto:bernadette.roseabalos@gmail.com">
       <BsFillEnvelopeFill className="icon" /> | email 
