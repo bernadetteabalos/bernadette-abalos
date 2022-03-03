@@ -1,0 +1,39 @@
+.workPage {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 30em 30em;
+  grid-template-rows: auto;
+  padding-top: 2em;
+  padding-bottom: 5em;
+  .workImage {
+    max-width: 100%;
+    height: auto;
+  }
+  .workInfo {
+    max-width: 100%;
+    padding-left: 2em;
+    text-align: left;
+    
+  }
+}
+
+.secondSection {
+  color: red;
+}
+
+@media only screen and (max-width: 1024px) {
+  .workPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .workImage {
+      max-width: 70%;
+      height: auto;
+    }
+    .workInfo {
+      max-width: 100%;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+}
