@@ -26,6 +26,28 @@
   }
 }
 
+.back {
+  padding-top: 2em;
+  
+  a {
+    text-decoration: none;
+    color: #DC8580;
+    
+    transition: all 0.3s ease;
+  
+    &:hover {
+      color: #e4b1ae;
+      
+    }
+    &.active {
+      text-decoration: underline;
+      color:#DC8580;
+    }
+  }
+}
+
+
+
 .secondSection {
   color: red;
 }
@@ -36,18 +58,25 @@
     align-items: center;
     grid-template-columns: 30em;
     grid-template-rows: auto;
+    
     .workImage {
       max-width: 70%;
       height: auto;
     }
     .workInfo {
       max-width: 100%;
-      padding-left: 0;
       text-align: left;
+      padding-left: 1em;
+    }
+    .workInfoTwo {
+      max-width: 100%;
+      text-align: left;
+      padding: 1em;
     }
     .fullSection {
       max-width: 100%;
       padding-top: 3em;
+      
     }
   }
 }

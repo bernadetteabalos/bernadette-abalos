@@ -88,6 +88,10 @@ main {
   // background-image: url('../../images/night.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  .stars {
+    transform: scale(-1 1); 
+    transform-origin: center;
+  }
   
 }
 
@@ -169,6 +173,19 @@ hr {
   animation-duration: 0.1s;
 }
 
+footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+            padding: 0px;
+            bottom: 0;
+            width: 100%;
+            /* Height of the footer*/ 
+            height: 40px;
+            background: grey;
+}
+
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
@@ -178,7 +195,7 @@ hr {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1400px) {
   .navigation {
     visibility: hidden;
   }

@@ -1,5 +1,7 @@
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react'
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
@@ -11,18 +13,25 @@ const BlogPost = ({ data }) => {
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.date}</p>
       <div className="workPage">
-      <GatsbyImage
-      data-sal="fade"
-      data-sal-duration="1000"
-      data-sal-delay="200"
-      data-sal-easing="ease" 
-      className="workImage"
-      image={image}
-      alt={data.mdx.frontmatter.hero_image_alt}
-    />
-      <MDXRenderer>
-        {data.mdx.body}
-      </MDXRenderer>
+        <GatsbyImage
+          data-sal="fade"
+          data-sal-duration="1000"
+          data-sal-delay="200"
+          data-sal-easing="ease"
+          className="workImage"
+          image={image}
+          alt={data.mdx.frontmatter.hero_image_alt}
+        />
+        <MDXRenderer>
+          {data.mdx.body}
+        </MDXRenderer>
+        <div className="back">
+        <Link sx={{
+          color: 'text'
+        }} to="/blog" >
+          ← back to projects
+        </Link>
+        </div>
       </div>
     </Layout>
   )
