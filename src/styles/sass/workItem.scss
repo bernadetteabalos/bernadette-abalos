@@ -1,7 +1,7 @@
 .workPage {
   display: grid;
   justify-items: center;
-  grid-template-columns: 30em 30em;
+  grid-template-columns: 55em;
   grid-template-rows: auto;
   padding-top: 2em;
   padding-bottom: 5em;
@@ -18,11 +18,11 @@
   }
   .workInfoTwo {
     max-width: 100%;
-    text-align: right;
+    text-align: left;
   }
   .fullSection {
     padding-top: 3em;
-    max-width: 200%;
+    max-width: 100%;
   }
 }
 
@@ -43,7 +43,7 @@
     .workInfo {
       max-width: 100%;
       padding-left: 0;
-      text-align: center;
+      text-align: left;
     }
     .fullSection {
       max-width: 100%;
