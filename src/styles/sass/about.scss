@@ -1,4 +1,5 @@
 .aboutPage {
+  width: 100%;
   display: flex;
   flex-direction: row;
   padding-top: 2em;
@@ -8,7 +9,7 @@
     height: auto;
   }
   .aboutInfo {
-    max-width: 50%;
+    max-width: 100%;
     padding-left: 2em;
     text-align: left;
     a {
@@ -35,11 +36,12 @@
 
 @media only screen and (max-width: 1024px) {
   .aboutPage {
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     .aboutImage {
-      max-width: 70%;
+      max-width: 100%;
       height: auto;
     }
     .aboutInfo {
