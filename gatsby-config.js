@@ -9,6 +9,13 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
+    {
+      
+      resolve: 'gatsby-plugin-manifest',
+        options: {
+          icon: "src/images/pfp.svg"
+        },
+      },
     "gatsby-transformer-sharp",
     'gatsby-plugin-theme-ui',
     {
