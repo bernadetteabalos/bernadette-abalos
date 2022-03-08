@@ -50,7 +50,7 @@ const Layout = ({ pageTitle, children }) => {
           <button onClick={() => {state === "hidden" ? setState("showing") : setState("hidden")}} sx={{ bg: 'text', color: 'secondary' }} style={{ filter: state !== "hidden" && "brightness(1.5)"}}>
             <BsList/>
             </button>
-            <div className={fadeIn} id={navList} style={{ display: state === "hidden" ? "none" : "block"}}>
+            <div className={fadeIn} id={navList} style={{ cursor: "pointer", display: state === "hidden" ? "none" : "block"}}>
               <Link sx={{ bg: 'text', color: 'secondary' }} activeClassName={active} to="/">Home</Link>
               <Link sx={{ bg: 'text', color: 'secondary' }} activeClassName={active} to="/about">About</Link>
               <Link sx={{ bg: 'text', color: 'secondary' }} activeClassName={active} to="/blog">Work</Link>

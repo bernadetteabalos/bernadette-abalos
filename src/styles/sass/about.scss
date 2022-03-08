@@ -11,7 +11,21 @@
     max-width: 50%;
     padding-left: 2em;
     text-align: left;
+    a {
+      text-decoration: none;
+      color: #DC8580;
+      
+      transition: all 0.3s ease;
     
+      &:hover {
+        color: #e4b1ae;
+        
+      }
+      &.active {
+        text-decoration: underline;
+        color:#DC8580;
+      }
+    }
   }
 }
 

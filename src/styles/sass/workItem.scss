@@ -54,13 +54,12 @@
 
 @media only screen and (max-width: 1024px) {
   .workPage {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 30em;
-    grid-template-rows: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     
     .workImage {
-      max-width: 70%;
+      width: 100%;
       height: auto;
     }
     .workInfo {

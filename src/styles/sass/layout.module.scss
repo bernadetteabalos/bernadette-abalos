@@ -120,6 +120,7 @@ hr {
   z-index: 6;
   padding: 2em;
   button {
+    cursor: pointer;
     font-size: 18px;
     border: none;
     width: 60px;
@@ -197,7 +198,11 @@ footer {
 
 @media only screen and (max-width: 1400px) {
   .navigation {
-    visibility: hidden;
+    display: none;
+  }
+  main {
+    padding-top: 12em;
+    padding-bottom: 2em;
   }
   .navButton {
     display: block;
